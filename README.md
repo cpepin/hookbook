@@ -7,6 +7,7 @@ README file for documentation.
 
 ## Hooks
 - useManagedState
+- useDebounce
 
 ## Todo
 - Set up a development environment
