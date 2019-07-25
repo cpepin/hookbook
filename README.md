@@ -10,5 +10,5 @@ npm i --save hookbook
 
 ## Usage
 ```
-import { useManagedState } from 'hookbook';
+import { useManagedState } from '@cpepin/hookbook';
 ```
