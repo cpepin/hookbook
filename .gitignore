@@ -1,1 +1,3 @@
 node_modules
+bundle.esm.js
+bundle.umd.js
