@@ -1,8 +1,6 @@
-const babel = require('rollup-plugin-babel');
-const resolve = require('rollup-plugin-node-resolve');
+const common = require('./rollup.common.config');
 
-export default {
-  input: 'lib/index.js',
+export default Object.assign({}, common, {
   output: {
     file: 'bundle.esm.js',
     format: 'esm',
@@ -10,9 +8,4 @@ export default {
       'react': 'React',
     },
   },
-  external: ['react'],
-  plugins: [
-    babel({ exclude: 'node_modules/**' }),
-    resolve(),
-  ],
-};
+});
