@@ -5,7 +5,7 @@ A collection of helpful React hooks!
 
 ## Install
 ```
-npm i --save hookbook
+npm i --save @cpepin/hookbook
 ```
 
 ## Usage
