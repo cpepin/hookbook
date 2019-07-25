@@ -20,3 +20,6 @@ import { useManagedState } from '@cpepin/hookbook';
 * useStateWithGetter
 
 To view documentation on each individual hook, view the corresponding README in the `lib/hooks` folder.
+
+## Browser Support
+Both the `esm` and `umd` bundles support IE11 and all modern browsers (Edge, Chrome, Firefox, Safari).
