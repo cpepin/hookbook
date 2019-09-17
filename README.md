@@ -17,6 +17,7 @@ import { useManagedState } from '@cpepin/hookbook';
 * useDebounce
 * useManagedState
 * useMemoize
+* useSearch
 * useStateWithGetter
 
 To view documentation on each individual hook, view the corresponding README in the `lib/hooks` folder.
