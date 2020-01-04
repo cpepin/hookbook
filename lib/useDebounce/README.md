@@ -5,8 +5,7 @@ Heavily inspired by `useDebounce` from usehooks.com, additionally this recipe pr
 ```js
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-
-import useDebounce from "./useDebounce";
+import useDebounce from '@cpepin/hookbook/useDebounce';
 
 function App() {
   const [search, setSearch] = useState("");

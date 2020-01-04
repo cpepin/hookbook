@@ -5,7 +5,7 @@ An idiomatic way to override useState, and manage state on your own.
 (https://codesandbox.io/s/x32028vj0o)
 ```tsx
 import * as React from "react";
-import useManagedState from "./useManagedState";
+import useManagedState from '@cpepin/hookbook/useManagedState';
 
 interface ITickerProps {
   tickerState?: number;

@@ -1,3 +1,6 @@
 node_modules
+esm
+dist
 bundle.esm.js
 bundle.umd.js
+coverage

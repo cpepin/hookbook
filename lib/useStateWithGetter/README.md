@@ -5,7 +5,7 @@ A way to access a getter with useState
 ```jsx
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import useStateWithGetter from "./useStateWithGetter";
+import useStateWithGetter from '@cpepin/hookbook/useStateWithGetter';
 
 class Incrimentor {
   constructor(controls) {

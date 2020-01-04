@@ -9,9 +9,7 @@ A helpful hook to manage the state of a Search input component. The result of `u
 import React from "react";
 import ReactDOM from "react-dom";
 import faker from "faker";
-
-import "./styles.css";
-import useSearch from "./useSearch";
+import useSearch from '@cpepin/hookbook/useSearch';
 
 const users = [];
 

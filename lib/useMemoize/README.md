@@ -6,8 +6,7 @@ One of the common misconceptions about `useMemo` is that it memoizes in the trad
 
 ```jsx
 import React, { useEffect, useState } from 'react';
-
-import useMemoize from './useMemoize';
+import useMemoize from '@cpepin/hookbook/useMemoize';
 
 const Search = ({ queryResolver, onResultsChange }) => {
   const [results, setResults] = useState([]);
