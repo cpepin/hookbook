@@ -12,7 +12,7 @@ import useMemoize from './useMemoize';
 const Search = ({ queryResolver, onResultsChange }) => {
   const [results, setResults] = useState([]);
   const [query, setQuery] = useState('');
-  const memoizedQueryResolver = useMemoization(queryResolver);
+  const memoizedQueryResolver = useMemoize(queryResolver);
 
   const handleChange = (e) => setQuery(e.target.value);
 

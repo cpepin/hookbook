@@ -1,11 +1,19 @@
-const common = require('./rollup.common.config');
+const typescript = require('rollup-plugin-typescript2')
+const resolve = require('@rollup/plugin-node-resolve')
+const commonjs = require('@rollup/plugin-commonjs')
+
+const common = require('./rollup.common.config')
 
 export default Object.assign({}, common, {
+  preserveModules: true,
   output: {
-    file: 'bundle.esm.js',
+    dir: 'lib',
     format: 'esm',
-    globals: {
-      'react': 'React',
-    },
+    sourcemap: true,
   },
-});
+  plugins: [
+    commonjs(),
+    resolve(),
+    typescript({ useTsconfigDeclarationDir: true, clean: true }),
+  ],
+})

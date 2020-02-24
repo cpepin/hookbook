@@ -3,12 +3,11 @@ import { useRef, useState, useEffect } from "react";
 /**
  * Heavily inspired by useDebounce from usehooks.com,
  * additionally this recipe provides a cancel function to back out of debounced state updates.
- * @param {*} value state value to debounce
- * @param {*} delay delay before updated debounced value
  * 
- * @returns {[debounceValue, cancelUpdate]}
+ * @param value state value to debounce
+ * @param delay delay before updated debounced value
  */
-function useDebounce(value, delay) {
+function useDebounce<T>(value: T, delay: number): [T, () => void] {
   const [debouncedValue, setDebouncedValue] = useState(value);
   const cancelUpdate = useRef(() => {});
 

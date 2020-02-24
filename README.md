@@ -1,7 +1,7 @@
 # Hookbook 👨‍🍳
 [![npm version](https://badge.fury.io/js/%40cpepin%2Fhookbook.svg)](https://badge.fury.io/js/%40cpepin%2Fhookbook)
 
-A collection of helpful React hooks!
+A collection of helpful (& typed) React hooks!
 
 ## Install
 ```
@@ -10,13 +10,14 @@ npm i --save @cpepin/hookbook
 
 ## Usage
 ```
-import { useManagedState } from '@cpepin/hookbook';
+import useManagedState from '@cpepin/hookbook/lib/hooks/useManagedState';
 ```
 
 ## Available Hooks
 * useDebounce
 * useManagedState
 * useMemoize
+* useOutsideClick
 * useSearch
 * useStateWithGetter
 

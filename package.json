@@ -4,35 +4,57 @@
     "type": "git",
     "url": "https://github.com/cpepin/hookbook.git"
   },
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "A collection of helpful React hooks!",
   "files": [
-    "bundle.esm.js",
-    "bundle.umd.js"
+    "lib/*"
   ],
-  "main": "bundle.umd.js",
-  "module": "bundle.esm.js",
+  "main": "lib/bundle.umd.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "build": "rollup --config rollup.esm.config.js && rollup --config rollup.umd.config.js"
+    "build": "rm -rf lib && rollup --config rollup.esm.config.js && rollup --config rollup.umd.config.js"
   },
   "keywords": [],
   "author": "Cam Pepin <cam@wearebloom.agency>",
   "license": "ISC",
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "core-js": "^3.1.4",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@types/lodash": "^4.14.149",
+    "@types/react": "^16.9.22",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "core-js": "^3.6.4",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1",
     "regenerator-runtime": "^0.13.3",
-    "rollup": "^1.17.0",
+    "rollup": "^2.0.6",
     "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.0.1",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "rollup-plugin-typescript2": "^0.26.0",
+    "tslib": "^1.11.0",
+    "typescript": "^3.8.2"
   },
   "peerDependencies": {
     "react": "^16.8.6"
   },
   "dependencies": {
+    "lodash": "^4.17.15",
     "p-cancelable": "^2.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
   }
 }
