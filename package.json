@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/cpepin/hookbook.git"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A collection of helpful React hooks!",
   "files": [
     "lib/*"
@@ -55,6 +55,7 @@
     }
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "*.js": "eslint --cache --fix",
+    "*.ts": "eslint --cache --fix"
   }
 }
