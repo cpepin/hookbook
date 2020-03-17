@@ -1,5 +1,5 @@
 
-import { useCallback, useState, useRef } from 'react';
+import { useCallback, useState, useRef, Dispatch, SetStateAction } from 'react';
 
 /**
  * useState function with a getter.
@@ -7,13 +7,17 @@ import { useCallback, useState, useRef } from 'react';
  * @param initialState
  */
 function useStateWithGetter<T>(initialState: T | (() => T)) {
-  const ref = useRef<T>();
-  const [state, setState] = useState(initialState);
+  const [state, setState] = useState(typeof initialState === 'function' ? (initialState as () => T)() : initialState);
+  const ref = useRef<T>(state);
   ref.current = state;
 
-  const set = useCallback((value: T) => {
-    ref.current = value;
-    setState(value);
+  const set = useCallback<Dispatch<SetStateAction<T>>>((setStateAction) => {
+    if (typeof setStateAction === 'function') {
+      ref.current = (setStateAction as (prevState: T) => T)(state);
+    }
+
+    ref.current = setStateAction as T;
+    setState(ref.current);
   }, [setState]);
 
   const get = useCallback(() => {
